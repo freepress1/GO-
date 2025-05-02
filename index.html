@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+  <title>Radio Player</title>
+  <style>
+    body {
+      margin: 0;
+      background: transparent;
+    }
+    .audio-slim {
+      padding: 0;
+      margin: 0;
+      background: transparent;
+    }
+    audio {
+      width: 100%;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <!-- Open Player button -->
-    <button onclick="openPlayer()">Open Radio Player</button>
-
-    <script>
-      function openPlayer() {
-        const win = window.open('player.html', 'radioPlayer', 'width=350,height=80');
-        if (win) win.focus();
-      }
-    </script>
+  <div class="audio-slim">
+    <audio id="audio" controls>
+      <source src="https://stream.zeno.fm/e1yf9avqgbjvv" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 </body>
 </html>
+
